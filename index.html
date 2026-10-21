@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- WIJZIG: name set to Jarno -->
+  <title data-i18n="meta.title">Jarno – Game Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Jarno, software developer who builds games in Unity and C#: projects, skills, resume and dev log." data-i18n-attr="content:meta.description">
+  <meta name="theme-color" content="#1b1535">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&amp;family=Pixelify+Sans:wght@500;700&amp;display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/i18n.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main" data-i18n="nav.skip">Skip to content</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <!-- WIJZIG: logo initial -->
+    <a class="logo" href="#top" aria-label="Jarno, back to top" data-i18n-attr="aria-label:nav.home">J<span class="logo-cursor" aria-hidden="true">_</span></a>
+
+    <nav class="site-nav" aria-label="Main" data-i18n-attr="aria-label:nav.label">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-list">
+        <span class="menu-icon" aria-hidden="true"></span>
+        <span data-i18n="nav.menu">Menu</span>
+      </button>
+      <ul id="nav-list" class="nav-list">
+        <li><a href="#about" data-i18n="nav.about">About</a></li>
+        <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+        <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+        <li><a href="#timeline" data-i18n="nav.timeline">Timeline</a></li>
+        <li><button class="nav-btn" type="button" data-dialog="dlg-resume" aria-haspopup="dialog" data-i18n="nav.resume">Resume</button></li><!-- WIJZIG: opens the resume pop-up -->
+        <li><a href="#blog" data-i18n="nav.blog">Dev log</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="lang-switch" role="group" aria-label="Language" data-i18n-attr="aria-label:nav.language">
+      <button type="button" data-lang="en" aria-pressed="true" lang="en" aria-label="English">EN</button>
+      <button type="button" data-lang="nl" aria-pressed="false" lang="nl" aria-label="Nederlands">NL</button>
+    </div>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+  <!-- ===================== HERO / TITLE SCREEN ===================== -->
+  <!-- WIJZIG: name and intro -->
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <p class="hero-kicker" data-i18n="hero.kicker">Player one has joined the game</p>
+        <h1 id="hero-title" class="hero-title">Jarno</h1>
+        <p class="hero-role" data-i18n="hero.role">Software Development student at SintLucas, looking for a game studio internship from summer 2027.</p><!-- WIJZIG: says what you are looking for -->
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects" data-i18n="hero.cta">Press start: see my projects</a>
+          <button class="btn" type="button" data-dialog="dlg-resume" aria-haspopup="dialog" data-i18n="hero.cta2">Open my resume</button><!-- WIJZIG: opens the resume pop-up -->
+        </div>
+      </div>
+      <!-- WIJZIG: your photo at the top instead of the pixel character -->
+      <div class="hero-art">
+        <figure class="hero-photo">
+          <img src="assets/jarno.jpg" width="400" height="500" fetchpriority="high" decoding="async" alt="Photo of Jarno de Vries" data-i18n-attr="alt:about.photoAlt">
+          <figcaption class="hero-photo-tag" aria-hidden="true">P1</figcaption>
+        </figure>
+        <div class="ground" aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <!-- WIJZIG: your own introduction -->
+  <section class="section" id="about" aria-labelledby="about-title">
+    <div class="container">
+      <h2 id="about-title" data-i18n="about.title">About me</h2>
+      <div class="about-grid">
+        <div class="prose">
+          <p class="about-subtitle" data-i18n="about.subtitle">Game developer in training</p><!-- VOEG TOE -->
+          <p data-i18n="about.p1">Hi, I'm Jarno. I'm a software developer who builds games. I mostly make them in Unity, sometimes in Unreal Engine, and I program in C#.</p>
+          <p data-i18n="about.p2">I like 2D games with a clear goal, from escaping a building full of turrets to slicing Christmas food. I'm always open to learning new programming languages and tools.</p>
+          <!-- VOEG TOE: quick facts, what you are looking for, and buttons (moved here from the top of the page) -->
+          <ul class="about-facts">
+            <li><span class="about-fact-label" data-i18n="about.factSkills">Skills</span> <span>Unity · C# · GitHub</span></li>
+            <li><span class="about-fact-label" data-i18n="about.factGames">Games</span> <span data-i18n="about.factGamesValue">2 finished, 2 in development</span></li>
+          </ul>
+          <p class="about-status"><span class="status-dot" aria-hidden="true"></span><span data-i18n="about.status">Looking for a six-month internship at a game studio, from summer 2027</span></p>
+          <div class="about-actions">
+            <a class="btn btn-primary" href="#contact" data-i18n="about.ctaContact">Contact me</a>
+          </div>
+        </div>
+        <!-- WIJZIG: school, study and city -->
+        <div class="about-side">
+        <dl class="stat-list">
+          <div>
+            <dt data-i18n="about.schoolLabel">School</dt>
+            <dd>SintLucas, Eindhoven</dd>
+          </div>
+          <div>
+            <dt data-i18n="about.studyLabel">Study</dt>
+            <dd>MBO Software Development (Level 4)</dd>
+          </div>
+          <div>
+            <dt data-i18n="about.locationLabel">Location</dt>
+            <dd data-i18n="about.location">Best, the Netherlands</dd>
+          </div>
+          <div>
+            <dt data-i18n="about.engineLabel">Favourite engine</dt>
+            <dd>Unity</dd>
+          </div>
+        </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SKILLS ===================== -->
+  <!-- WIJZIG: skills now show experience in years instead of a 1-5 bar -->
+  <section class="section section-alt" id="skills" aria-labelledby="skills-title">
+    <div class="container">
+      <h2 id="skills-title" data-i18n="skills.title">Skills</h2>
+      <p class="section-intro" data-i18n="skills.intro">How long I've been working with each tool.</p>
+      <div class="skill-groups">
+        <section class="skill-group" aria-labelledby="sg-engines">
+          <h3 id="sg-engines" data-i18n="skills.engines">Game engines</h3>
+          <ul class="skill-list">
+            <li><span class="skill-name">Unity</span><span class="skill-exp" data-i18n="skills.oneYear">1 year</span></li>
+            <li><span class="skill-name">Unreal Engine</span><span class="skill-exp skill-new" data-i18n="skills.justStarted">Just started</span></li>
+          </ul>
+        </section>
+        <section class="skill-group" aria-labelledby="sg-code">
+          <h3 id="sg-code" data-i18n="skills.code">Programming</h3>
+          <ul class="skill-list">
+            <li><span class="skill-name">C#</span><span class="skill-exp" data-i18n="skills.oneYear">1 year</span></li>
+          </ul>
+          <!-- VOEG TOE: open to learning other languages -->
+          <p class="skill-note" data-i18n="skills.openToLearn">Open to learning other languages, like C++ for Unreal Engine.</p>
+        </section>
+        <section class="skill-group" aria-labelledby="sg-tools">
+          <h3 id="sg-tools" data-i18n="skills.tools">Tools</h3>
+          <ul class="skill-list">
+            <li><span class="skill-name">GitHub</span><span class="skill-exp" data-i18n="skills.oneYear">1 year</span></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROJECTS ===================== -->
+  <!-- WIJZIG: your three games. The "Challenges" texts are drafts: rewrite them with what really happened -->
+  <section class="section" id="projects" aria-labelledby="projects-title">
+    <div class="container">
+      <h2 id="projects-title" data-i18n="projects.title">Projects</h2>
+      <p class="section-intro" data-i18n="projects.intro">Games I've built in Unity, including two I'm still working on. Open a project to read how it works and which problems I solved.</p><!-- WIJZIG -->
+
+      <ul class="project-list">
+        <li class="project-card" style="--scene-a:#3dd6c4;--scene-b:#2c2356">
+          <!-- WIJZIG: gameplay clip that plays on hover, focus or tap -->
+          <div class="project-thumb has-video">
+            <video class="thumb-video" src="assets/downtop.mp4?v=2" poster="assets/downtop.jpg?v=2" width="640" height="360" muted loop playsinline preload="none" aria-hidden="true"></video>
+            <button class="video-toggle" type="button"><span class="video-toggle-label">Play clip</span><span class="sr-only">: DownTop</span></button>
+          </div>
+          <div class="project-body">
+            <h3>DownTop</h3>
+            <p class="project-genre" data-i18n="p1.genre">2D top-down shooter</p>
+            <p data-i18n="p1.short">Escape a building guarded by turrets. Shoot the turrets, find keys to open doors and break through walls to reach the exit.</p>
+            <ul class="tags" aria-label="Technologies" data-i18n-attr="aria-label:projects.tech">
+              <li>Unity</li><li>C#</li><li>GitHub</li>
+            </ul>
+            <button class="btn btn-small" type="button" data-dialog="dlg-p1" aria-haspopup="dialog"><span data-i18n="projects.details">Read the details</span><span class="sr-only">: DownTop</span></button>
+          </div>
+        </li>
+        <li class="project-card" style="--scene-a:#b98cff;--scene-b:#231b45">
+          <!-- VOEG TOE: gameplay clip that plays on hover, focus or tap -->
+          <div class="project-thumb has-video">
+            <video class="thumb-video" src="assets/dungeon.mp4" poster="assets/dungeon.jpg" width="640" height="360" muted loop playsinline preload="none" aria-hidden="true"></video>
+            <button class="video-toggle" type="button"><span class="video-toggle-label">Play clip</span><span class="sr-only">: Dungeon Crawler</span></button>
+          </div>
+          <div class="project-body">
+            <h3>Dungeon Crawler</h3>
+            <p class="project-genre" data-i18n="p2.genre">2D round-based dungeon crawler</p>
+            <p data-i18n="p2.short">Survive round after round of stronger enemies and earn coins for every enemy you defeat. After each round a shop appears with an upgrade shop and a weapon shop.</p><!-- WIJZIG: coins and two shops -->
+            <ul class="tags" aria-label="Technologies" data-i18n-attr="aria-label:projects.tech">
+              <li>Unity</li><li>C#</li><li>GitHub</li>
+            </ul>
+            <button class="btn btn-small" type="button" data-dialog="dlg-p2" aria-haspopup="dialog"><span data-i18n="projects.details">Read the details</span><span class="sr-only">: Dungeon Crawler</span></button>
+          </div>
+        </li>
+        <!-- VOEG TOE: Chi-Chanting (team project, in development). Placeholder image until screenshots are added -->
+        <li class="project-card" style="--scene-a:#ffc93c;--scene-b:#3a2f6b">
+          <div class="project-thumb" aria-hidden="true"><span class="thumb-block"></span></div>
+          <div class="project-body">
+            <h3>Chi-Chanting</h3>
+            <p class="status-badge" data-i18n="projects.inProgress">In development</p><!-- remove when the game is finished -->
+            <p class="project-genre" data-i18n="p4.genre">2D game inspired by the classic Pokémon games, team of 4</p>
+            <p data-i18n="p4.short">Fight battles yourself and activate attacks by speaking them into the microphone.</p>
+            <ul class="tags" aria-label="Technologies" data-i18n-attr="aria-label:projects.tech">
+              <li>Unity</li><li>C#</li>
+            </ul>
+            <button class="btn btn-small" type="button" data-dialog="dlg-p4" aria-haspopup="dialog"><span data-i18n="projects.details">Read the details</span><span class="sr-only">: Chi-Chanting</span></button>
+          </div>
+        </li>
+        <li class="project-card" style="--scene-a:#ff7b7b;--scene-b:#1f4a3a">
+          <div class="project-thumb" aria-hidden="true"><span class="thumb-block"></span></div>
+          <div class="project-body">
+            <h3>Cozy Ninja</h3>
+            <p class="status-badge" data-i18n="projects.inProgress">In development</p><!-- VOEG TOE: remove when the game is finished -->
+            <p class="project-genre" data-i18n="p3.genre">2D arcade game inspired by Fruit Ninja</p>
+            <p data-i18n="p3.short">Slice Christmas food to score points. Slice a present by accident and you lose a heart.</p>
+            <ul class="tags" aria-label="Technologies" data-i18n-attr="aria-label:projects.tech">
+              <li>Unity</li><li>C#</li><li>GitHub</li>
+            </ul>
+            <button class="btn btn-small" type="button" data-dialog="dlg-p3" aria-haspopup="dialog"><span data-i18n="projects.details">Read the details</span><span class="sr-only">: Cozy Ninja</span></button>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Project detail dialogs -->
+    <dialog id="dlg-p1" class="project-dialog" aria-labelledby="dlg-p1-title">
+      <div class="dialog-inner">
+        <form method="dialog" class="dialog-close-form">
+          <button class="dialog-close" type="submit"><span data-i18n="projects.close">Close</span></button>
+        </form>
+        <h3 id="dlg-p1-title">DownTop</h3>
+        <!-- VOEG TOE: gameplay clip with controls -->
+        <video class="dialog-video" src="assets/downtop.mp4?v=2" poster="assets/downtop.jpg?v=2" width="640" height="360" controls muted loop playsinline preload="none" aria-label="Gameplay clip of DownTop" data-i18n-attr="aria-label:p1.videoLabel"></video>
+        <dl class="project-meta">
+          <div><dt data-i18n="projects.genreLabel">Genre</dt><dd data-i18n="p1.genre">2D top-down shooter</dd></div>
+          <div><dt data-i18n="projects.statusLabel">Status</dt><dd data-i18n="p1.status">Finished in September 2026</dd></div><!-- VOEG TOE -->
+          <div><dt data-i18n="projects.engineLabel">Engine</dt><dd>Unity</dd></div>
+          <div><dt data-i18n="projects.languageLabel">Language</dt><dd>C#</dd></div>
+        </dl>
+        <h4 data-i18n="projects.builtWith">Built with</h4>
+        <ul class="tags"><li>Unity</li><li>C#</li><li>GitHub</li></ul>
+        <!-- VOEG TOE: features list -->
+        <h4 data-i18n="projects.features">Features</h4>
+        <ul class="feature-list">
+          <li data-i18n="p1.f1">Turrets that you have to destroy by shooting them</li>
+          <li data-i18n="p1.f2">Keys that open locked doors</li>
+          <li data-i18n="p1.f3">Walls you break to get further into the building</li>
+        </ul>
+        <!-- WIJZIG: your real challenge, in your own words -->
+        <h4 data-i18n="projects.challenges">Challenges I overcame</h4>
+        <ul class="challenge-list">
+          <li>
+            <p class="challenge-problem" data-i18n="p1.c1.problem">The hardest part was making sure the player and the turrets didn't hit themselves with their own bullets. A bullet was spawned inside the shooter, so it hit its own shooter straight away.</p>
+            <p data-i18n="p1.c1.solution">I gave the player and every turret a spawn point just in front of them, outside their own collider. Bullets now appear there, so they never touch the one who fired them.</p>
+          </li>
+        </ul>
+        <h4 data-i18n="projects.nextTime">What I'd do differently next time</h4>
+        <p data-i18n="p1.nextTime">Test shooting with the player and the turrets much earlier, so problems like this show up straight away instead of late in the project.</p>
+        <!-- EDIT: links go to your GitHub profile; replace with the link to each game's repository -->
+        <p class="dialog-links">
+          <a href="https://github.com/ShadowStar987" target="_blank" rel="noopener"><span data-i18n="projects.code">See my code on GitHub</span><span class="sr-only" data-i18n="common.newTab">(opens in a new tab)</span></a>
+        </p>
+      </div>
+    </dialog>
+
+    <dialog id="dlg-p2" class="project-dialog" aria-labelledby="dlg-p2-title">
+      <div class="dialog-inner">
+        <form method="dialog" class="dialog-close-form">
+          <button class="dialog-close" type="submit"><span data-i18n="projects.close">Close</span></button>
+        </form>
+        <h3 id="dlg-p2-title">Dungeon Crawler</h3>
+        <!-- VOEG TOE: gameplay clip with controls -->
+        <video class="dialog-video" src="assets/dungeon.mp4" poster="assets/dungeon.jpg" width="640" height="360" controls muted loop playsinline preload="none" aria-label="Gameplay clip of Dungeon Crawler" data-i18n-attr="aria-label:p2.videoLabel"></video>
+        <dl class="project-meta">
+          <div><dt data-i18n="projects.genreLabel">Genre</dt><dd data-i18n="p2.genre">2D round-based dungeon crawler</dd></div>
+          <div><dt data-i18n="projects.statusLabel">Status</dt><dd data-i18n="p2.status">Finished in May 2026</dd></div><!-- VOEG TOE -->
+          <div><dt data-i18n="projects.engineLabel">Engine</dt><dd>Unity</dd></div>
+          <div><dt data-i18n="projects.languageLabel">Language</dt><dd>C#</dd></div>
+        </dl>
+        <h4 data-i18n="projects.builtWith">Built with</h4>
+        <ul class="tags"><li>Unity</li><li>C#</li><li>GitHub</li></ul>
+        <h4 data-i18n="projects.features">Features</h4>
+        <ul class="feature-list">
+          <!-- WIJZIG: coins and two shops -->
+          <li data-i18n="p2.f1">Enemies get stronger every round</li>
+          <li data-i18n="p2.f4">Earn coins by defeating enemies</li>
+          <li data-i18n="p2.f2">A shop appears after every round, where you choose which shop you want to buy from</li>
+          <li data-i18n="p2.f3">Upgrade shop: extra hearts and a shield</li>
+          <li data-i18n="p2.f5">Weapon shop: an iron sword and a battle axe</li>
+        </ul>
+        <!-- WIJZIG: your real challenge, in your own words -->
+        <h4 data-i18n="projects.challenges">Challenges I overcame</h4>
+        <ul class="challenge-list">
+          <li>
+            <p class="challenge-problem" data-i18n="p2.c1.problem">The hardest part was making the shop appear only when a round was really finished, and not while enemies were still alive.</p>
+            <p data-i18n="p2.c1.solution">I wrote a script that counts how many enemies are still alive. Every time an enemy is defeated the number goes down, and when it reaches zero the round is over and the shop spawns.</p>
+          </li>
+        </ul>
+        <h4 data-i18n="projects.nextTime">What I'd do differently next time</h4>
+        <p data-i18n="p2.nextTime">Plan out all the systems first, like rounds, coins and the shops, before I start building, so I know how they fit together.</p>
+        <p class="dialog-links">
+          <a href="https://github.com/ShadowStar987" target="_blank" rel="noopener"><span data-i18n="projects.code">See my code on GitHub</span><span class="sr-only" data-i18n="common.newTab">(opens in a new tab)</span></a>
+        </p>
+      </div>
+    </dialog>
+
+    <dialog id="dlg-p3" class="project-dialog" aria-labelledby="dlg-p3-title">
+      <div class="dialog-inner">
+        <form method="dialog" class="dialog-close-form">
+          <button class="dialog-close" type="submit"><span data-i18n="projects.close">Close</span></button>
+        </form>
+        <h3 id="dlg-p3-title">Cozy Ninja</h3>
+        <p class="status-badge" data-i18n="projects.inProgress">In development</p><!-- VOEG TOE: remove when the game is finished -->
+        <dl class="project-meta">
+          <div><dt data-i18n="projects.genreLabel">Genre</dt><dd data-i18n="p3.genre">2D arcade game inspired by Fruit Ninja</dd></div>
+          <div><dt data-i18n="projects.statusLabel">Status</dt><dd data-i18n="projects.inProgress">In development</dd></div><!-- VOEG TOE -->
+          <div><dt data-i18n="projects.engineLabel">Engine</dt><dd>Unity</dd></div>
+          <div><dt data-i18n="projects.languageLabel">Language</dt><dd>C#</dd></div>
+        </dl>
+        <h4 data-i18n="projects.builtWith">Built with</h4>
+        <ul class="tags"><li>Unity</li><li>C#</li><li>GitHub</li></ul>
+        <h4 data-i18n="projects.features">Features</h4>
+        <ul class="feature-list">
+          <li data-i18n="p3.f1">Slice Christmas-themed food to score points</li>
+          <li data-i18n="p3.f2">Slice a present and you lose a heart</li>
+          <li data-i18n="p3.f3">A cozy winter style</li>
+        </ul>
+        <h4 data-i18n="projects.challenges">Challenges I overcame</h4>
+        <ul class="challenge-list">
+          <li>
+            <p class="challenge-problem" data-i18n="p3.c1.problem">The game had to recognise a slice from a quick mouse swipe.</p>
+            <p data-i18n="p3.c1.solution">I track the mouse position every frame and check which objects the line between the last two positions crosses.</p>
+          </li>
+          <li>
+            <p class="challenge-problem" data-i18n="p3.c2.problem">Food and presents had to fly up in fun, unpredictable arcs.</p>
+            <p data-i18n="p3.c2.solution">Each object gets a random upward and sideways force, and Unity's 2D physics does the rest.</p>
+          </li>
+        </ul>
+        <h4 data-i18n="projects.learned">What I learned</h4>
+        <p data-i18n="p3.learned">A simple idea feels much better with good feedback, like sounds and effects when you slice something.</p>
+        <p class="dialog-links">
+          <a href="https://github.com/ShadowStar987" target="_blank" rel="noopener"><span data-i18n="projects.code">See my code on GitHub</span><span class="sr-only" data-i18n="common.newTab">(opens in a new tab)</span></a>
+        </p>
+      </div>
+    </dialog>
+
+    <!-- VOEG TOE: Chi-Chanting pop-up. Only facts from the CV; add challenges when you know them -->
+    <dialog id="dlg-p4" class="project-dialog" aria-labelledby="dlg-p4-title">
+      <div class="dialog-inner">
+        <form method="dialog" class="dialog-close-form">
+          <button class="dialog-close" type="submit"><span data-i18n="projects.close">Close</span></button>
+        </form>
+        <h3 id="dlg-p4-title">Chi-Chanting</h3>
+        <p class="status-badge" data-i18n="projects.inProgress">In development</p>
+        <dl class="project-meta">
+          <div><dt data-i18n="projects.genreLabel">Genre</dt><dd data-i18n="p4.genreShort">2D game inspired by the classic Pokémon games</dd></div>
+          <div><dt data-i18n="projects.statusLabel">Status</dt><dd data-i18n="projects.inProgress">In development</dd></div>
+          <div><dt data-i18n="projects.teamLabel">Team</dt><dd data-i18n="p4.team">4 people</dd></div>
+          <div><dt data-i18n="projects.engineLabel">Engine</dt><dd>Unity</dd></div>
+        </dl>
+        <p data-i18n="p4.origin">Started as a school project. We liked it so much that we're continuing it in our own time.</p>
+        <h4 data-i18n="projects.builtWith">Built with</h4>
+        <ul class="tags"><li>Unity</li><li>C#</li></ul>
+        <h4 data-i18n="projects.features">Features</h4>
+        <ul class="feature-list">
+          <li data-i18n="p4.f1">You fight the battles yourself</li>
+          <li data-i18n="p4.f2">Activate attacks by speaking them into the microphone</li>
+        </ul>
+        <h4 data-i18n="projects.myPart">What I built</h4>
+        <ul class="feature-list">
+          <li data-i18n="p4.m1">The player movement</li>
+          <li data-i18n="p4.m2">Part of the game map</li>
+          <li data-i18n="p4.m3">Several menu screens</li>
+        </ul>
+        <h4 data-i18n="projects.learned">What I learned</h4>
+        <p data-i18n="p4.learned">How to work together and divide tasks within a development team.</p>
+      </div>
+    </dialog>
+  </section>
+
+  <!-- ===================== TIMELINE / WORLD MAP ===================== -->
+  <!-- WIJZIG: timeline based on your projects. -->
+  <section class="section section-alt" id="timeline" aria-labelledby="timeline-title">
+    <div class="container">
+      <h2 id="timeline-title" data-i18n="timeline.title">Timeline</h2>
+      <p class="section-intro" data-i18n="timeline.intro">My route so far. Each stop is a milestone in my education, my work or in making games.</p>
+
+      <ul class="timeline-legend" aria-label="Legend" data-i18n-attr="aria-label:timeline.legend">
+        <li class="type-edu" data-i18n="timeline.edu">Education</li>
+        <li class="type-work" data-i18n="timeline.work">Work</li>
+        <li class="type-milestone" data-i18n="timeline.milestone">Milestone</li>
+      </ul>
+
+      <!-- WIJZIG: dates from the CV; first job corrected to October 2023 -->
+      <ol class="timeline">
+        <li class="tl-item type-work">
+          <span class="tl-node" aria-hidden="true">1-1</span>
+          <div class="tl-card">
+            <p class="tl-meta"><time datetime="2023-10" data-format-month>October 2023</time> <span class="tl-type" data-i18n="timeline.work">Work</span></p>
+            <h3 data-i18n="tw1.title">First job: dishwasher at Restaurant Suus</h3>
+            <p data-i18n="tw1.text">Working quickly and independently during busy evenings and weekends.</p>
+          </div>
+        </li>
+        <li class="tl-item type-edu">
+          <span class="tl-node" aria-hidden="true">1-2</span>
+          <div class="tl-card">
+            <p class="tl-meta"><time datetime="2024">2024</time> <span class="tl-type" data-i18n="timeline.edu">Education</span></p>
+            <h3 data-i18n="t0.title">Mavo diploma</h3>
+            <p data-i18n="t0.text">Graduated from Het Kempenhorst in Oirschot.</p>
+          </div>
+        </li>
+        <li class="tl-item type-edu">
+          <span class="tl-node" aria-hidden="true">1-3</span>
+          <div class="tl-card">
+            <p class="tl-meta"><time datetime="2024">2024</time> <span class="tl-type" data-i18n="timeline.edu">Education</span></p>
+            <h3 data-i18n="t1.title">Started Software Development at SintLucas</h3>
+            <p data-i18n="t1.text">MBO level 4 in Eindhoven. Wrote my first lines of C# and started making games in Unity.</p>
+          </div>
+        </li>
+        <li class="tl-item type-milestone">
+          <span class="tl-node" aria-hidden="true">2-1</span>
+          <div class="tl-card">
+            <p class="tl-meta"><time datetime="2024">2024</time> <span class="tl-type" data-i18n="timeline.milestone">Milestone</span></p>
+            <h3 data-i18n="tpong.title">First complete game: Pong</h3>
+            <p data-i18n="tpong.text">Recreated Pong on my own, with controls, ball movement and scoring.</p>
+          </div>
+        </li>
+        <li class="tl-item type-work">
+          <span class="tl-node" aria-hidden="true">2-2</span>
+          <div class="tl-card">
+            <p class="tl-meta"><time datetime="2025-08" data-format-month>August 2025</time> <span class="tl-type" data-i18n="timeline.work">Work</span></p>
+            <h3 data-i18n="tw2.title">Promoted to kitchen assistant</h3>
+            <p data-i18n="tw2.text">Moved from dishwasher to the kitchen team at Restaurant Suus.</p>
+          </div>
+        </li>
+        <li class="tl-item type-milestone">
+          <span class="tl-node" aria-hidden="true">2-3</span>
+          <div class="tl-card">
+            <p class="tl-meta"><time datetime="2026-05" data-format-month>May 2026</time> <span class="tl-type" data-i18n="timeline.milestone">Milestone</span></p>
+            <h3 data-i18n="t2.title">Finished Dungeon Crawler</h3>
+            <p data-i18n="t2.text">My first round-based game, with coins, two shops and stronger enemies every round.</p>
+          </div>
+        </li>
+        <li class="tl-item type-milestone">
+          <span class="tl-node" aria-hidden="true">3-1</span>
+          <div class="tl-card">
+            <p class="tl-meta"><time datetime="2026-09" data-format-month>September 2026</time> <span class="tl-type" data-i18n="timeline.milestone">Milestone</span></p>
+            <h3 data-i18n="t3.title">Finished DownTop</h3>
+            <p data-i18n="t3.text">A 2D shooter with turrets, keys, doors and breakable walls.</p>
+          </div>
+        </li>
+        <li class="tl-item type-milestone">
+          <span class="tl-node" aria-hidden="true">3-2</span>
+          <div class="tl-card">
+            <p class="tl-meta"><time datetime="2026">2026</time> <span class="tl-type" data-i18n="timeline.milestone">Milestone</span></p>
+            <h3 data-i18n="t5.title">First steps in Unreal Engine</h3>
+            <p data-i18n="t5.text">Started learning Unreal Engine next to Unity.</p>
+          </div>
+        </li>
+        <li class="tl-item type-milestone">
+          <span class="tl-node" aria-hidden="true">3-3</span>
+          <div class="tl-card">
+            <p class="tl-meta"><span class="tl-now" data-i18n="timeline.now">Now</span> <span class="tl-type" data-i18n="timeline.milestone">Milestone</span></p>
+            <h3 data-i18n="t4.title">In development: Cozy Ninja and Chi-Chanting</h3>
+            <p data-i18n="t4.text">A Christmas-themed slicing game, and a Pokémon-inspired game with a team of four where you speak attacks into the microphone.</p>
+          </div>
+        </li>
+        <li class="tl-item type-work tl-next">
+          <span class="tl-node" aria-hidden="true">4-1</span>
+          <div class="tl-card">
+            <p class="tl-meta"><span data-i18n="timeline.next">Next</span> <span class="tl-type" data-i18n="timeline.work">Work</span></p>
+            <h3 data-i18n="t6.title">Next level: internship</h3>
+            <p data-i18n="t6.text">Looking for a six-month internship at a game studio, starting after the summer of 2027. Could that be yours?</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===================== BLOG / DEV LOG ===================== -->
+  <!-- WIJZIG: example posts about your own games. EDIT: rewrite in your own words or remove -->
+  <section class="section section-alt" id="blog" aria-labelledby="blog-title">
+    <div class="container">
+      <h2 id="blog-title" data-i18n="blog.title">Dev log</h2>
+      <p class="section-intro" data-i18n="blog.intro">Short posts about what I'm learning and building.</p>
+
+      <div class="posts">
+        <article class="post" aria-labelledby="post1-title">
+          <p class="post-meta"><time datetime="2026-09-28" data-format-date>28 September 2026</time></p>
+          <h3 id="post1-title" data-i18n="b1.title">Making Cozy Ninja feel cozy</h3>
+          <p data-i18n="b1.excerpt">Fruit Ninja is fast and loud. I wanted the same fun, but calm and wintery. Here's what I changed.</p>
+          <details>
+            <summary data-i18n="blog.readMore">Read the full post</summary>
+            <div class="post-body">
+              <p data-i18n="b1.p1">Instead of fruit, the player slices Christmas food. The presents work like the bombs in Fruit Ninja: slice one and you lose a heart.</p>
+              <p data-i18n="b1.p2">Warm colours and soft sounds do most of the work. The rules barely changed, but the game feels completely different.</p>
+            </div>
+          </details>
+        </article>
+        <article class="post" aria-labelledby="post2-title">
+          <p class="post-meta"><time datetime="2026-05-29" data-format-date>29 May 2026</time></p>
+          <h3 id="post2-title" data-i18n="b2.title">Balancing rounds in my dungeon crawler</h3>
+          <p data-i18n="b2.excerpt">If enemies get stronger every round, the player needs to get stronger too. The shop is where that happens.</p>
+          <details>
+            <summary data-i18n="blog.readMore">Read the full post</summary>
+            <div class="post-body">
+              <p data-i18n="b2.p1">After every round a shop appears. The player chooses between a better weapon, a shield or buying health back. That choice is the heart of the game.</p>
+              <p data-i18n="b2.p2">If items are too cheap the game gets boring, and if they are too expensive it gets frustrating. Playtesting was the only way to find the right prices.</p>
+            </div>
+          </details>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <!-- WIJZIG: your real contact details -->
+  <section class="section" id="contact" aria-labelledby="contact-title">
+    <div class="container">
+      <h2 id="contact-title" data-i18n="contact.title">Contact</h2>
+      <p class="section-intro" data-i18n="contact.intro">Looking for an intern or a teammate, or just want to talk about games? Send me a message.</p>
+
+      <div class="contact-grid">
+        <ul class="contact-links">
+          <li>
+            <span class="contact-label">GitHub</span>
+            <a href="https://github.com/ShadowStar987" target="_blank" rel="noopener">github.com/ShadowStar987<span class="sr-only" data-i18n="common.newTab">(opens in a new tab)</span></a>
+          </li>
+          <li>
+            <span class="contact-label" data-i18n="contact.email">Email</span>
+            <a href="mailto:jarno.de.vries@sintlucasedu.nl">jarno.de.vries@sintlucasedu.nl</a>
+          </li>
+          <!-- WIJZIG: LinkedIn and Discord switched on again -->
+          <li>
+            <span class="contact-label">LinkedIn</span>
+            <a href="https://www.linkedin.com/in/jarno-de-vries-9229963b8/" target="_blank" rel="noopener">linkedin.com/in/jarno-de-vries<span class="sr-only" data-i18n="common.newTab">(opens in a new tab)</span></a>
+          </li>
+          <li>
+            <span class="contact-label">Discord</span>
+            <span class="discord-row">
+              <span id="discord-name">shadowstar_123</span>
+              <button class="copy-btn" type="button" data-copy-target="discord-name"><span data-i18n="contact.copy">Copy username</span></button>
+            </span>
+            <span class="copy-status" role="status"></span>
+          </li>
+        </ul>
+
+        <form class="contact-form" id="contact-form" data-email="jarno.de.vries@sintlucasedu.nl" novalidate>
+          <div class="field">
+            <label for="cf-name" data-i18n="contact.name">Your name</label>
+            <input id="cf-name" name="name" type="text" autocomplete="name" required aria-describedby="cf-name-error">
+            <p class="field-error" id="cf-name-error"></p>
+          </div>
+          <div class="field">
+            <label for="cf-email" data-i18n="contact.yourEmail">Your email address</label>
+            <input id="cf-email" name="email" type="email" autocomplete="email" required aria-describedby="cf-email-error">
+            <p class="field-error" id="cf-email-error"></p>
+          </div>
+          <div class="field">
+            <label for="cf-message" data-i18n="contact.message">Message</label>
+            <textarea id="cf-message" name="message" rows="5" required aria-describedby="cf-message-error"></textarea>
+            <p class="field-error" id="cf-message-error"></p>
+          </div>
+          <p class="form-note" id="cf-note" data-i18n="contact.note">This opens your email app with your message filled in.</p>
+          <button class="btn btn-primary" type="submit" aria-describedby="cf-note" data-i18n="contact.send">Send message</button>
+          <p class="form-status" id="form-status" role="status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© <span id="year">2026</span> Jarno. <span data-i18n="footer.built">Built by hand with HTML, CSS and JavaScript.</span></p>
+    <a href="#top" data-i18n="footer.top">Back to top</a>
+  </div>
+</footer>
+<!-- WIJZIG: resume is no longer a page section but a pop-up opened by a button. -->
+<dialog id="dlg-resume" class="project-dialog resume-dialog" aria-labelledby="resume-name">
+  <div class="resume-dialog-inner">
+    <div class="resume-actions">
+      <button class="btn btn-small" type="button" id="print-resume" data-i18n="resume.print">Save as PDF or print</button>
+      <form method="dialog">
+        <button class="dialog-close" type="submit"><span data-i18n="projects.close">Close</span></button>
+      </form>
+    </div>
+    <!-- WIJZIG: content from CV_Jarno_de_Vries_EN.docx, plus the portfolio games. Phone number left out on purpose (public site) -->
+    <article class="resume-sheet" aria-labelledby="resume-name">
+      <header class="resume-head">
+        <img class="resume-photo" src="assets/jarno.jpg" width="400" height="500" loading="lazy" decoding="async" alt=""><!-- VOEG TOE: photo (decorative here, the name is right next to it) -->
+        <h2 id="resume-name" class="resume-name">Jarno de Vries</h2>
+        <p class="resume-role" data-i18n="resume.role">Software Development student · C# · Unity · Unreal Engine</p>
+        <ul class="resume-contact">
+          <li><a href="mailto:Jarno@vries-de.nl">Jarno@vries-de.nl</a></li><!-- WIJZIG: personal email for the CV -->
+          <li data-i18n="about.location">Best, the Netherlands</li>
+          <li><a href="https://github.com/ShadowStar987" target="_blank" rel="noopener">github.com/ShadowStar987<span class="sr-only" data-i18n="common.newTab">(opens in a new tab)</span></a></li>
+          <!-- WIJZIG: LinkedIn and Discord only in the Contact section -->
+        </ul>
+      </header>
+
+      <div class="resume-cols">
+        <div class="resume-main">
+          <h3 data-i18n="resume.profile">Profile</h3>
+          <p data-i18n="resume.profileText">Motivated Software Development student (MBO level 4) at SintLucas with a passion for game development. I build games in C# and Unity, recently started learning Unreal Engine and am eager to learn new languages and tools. I work independently, enjoy solving problems creatively and like working in a team. I am looking for a six-month internship at a game studio, starting after the summer of 2027.</p>
+
+          <h3 data-i18n="resume.projects">Projects</h3>
+          <div class="resume-entry">
+            <p class="entry-title">Chi-Chanting</p>
+            <p class="entry-meta" data-i18n="resume.chi.meta">Team of 4 · Started as a school project, now continued in our own time · Unity, C# · 2D · In progress</p>
+            <ul>
+              <li data-i18n="resume.chi.b1">2D game inspired by the classic Pokémon games, in which the player fights battles personally and activates attacks by speaking them into the microphone</li>
+              <li data-i18n="resume.chi.b2">Developed the player movement, part of the game map and several menu screens</li>
+              <li data-i18n="resume.chi.b3">Learned how to collaborate and divide tasks within a development team</li>
+            </ul>
+          </div>
+          <div class="resume-entry">
+            <p class="entry-title">Cozy Ninja</p>
+            <p class="entry-meta" data-i18n="resume.proj3.meta">2D arcade game · Unity, C# · In progress</p>
+            <p data-i18n="resume.proj3.text">A Christmas-themed slicing game inspired by Fruit Ninja.</p>
+          </div>
+          <div class="resume-entry">
+            <p class="entry-title">DownTop</p>
+            <p class="entry-meta" data-i18n="resume.proj1.meta">2D top-down shooter · Unity, C# · September 2026</p>
+            <p data-i18n="resume.proj1.text">Turrets, keys and doors, and breakable walls in one escape level.</p>
+          </div>
+          <div class="resume-entry">
+            <p class="entry-title">Dungeon Crawler</p>
+            <p class="entry-meta" data-i18n="resume.proj2.meta">2D round-based game · Unity, C# · May 2026</p>
+            <p data-i18n="resume.proj2.text">Rounds of stronger enemies, coins for every enemy you defeat, and an upgrade shop and weapon shop between rounds.</p>
+          </div>
+          <div class="resume-entry">
+            <p class="entry-title">Pong</p>
+            <p class="entry-meta" data-i18n="resume.pong.meta">Individual school project · Unity, C# · 2024</p>
+            <ul>
+              <li data-i18n="resume.pong.b1">Recreated the classic game Pong as my first complete game</li>
+              <li data-i18n="resume.pong.b2">Programmed all game logic independently, including controls, ball movement and scoring</li>
+            </ul>
+          </div>
+
+          <h3 data-i18n="resume.education">Education</h3>
+          <div class="resume-entry">
+            <p class="entry-title" data-i18n="resume.edu1.title">MBO Software Development (Level 4)</p>
+            <p class="entry-meta" data-i18n="resume.edu1.meta">SintLucas, Eindhoven · 2024 to now</p>
+          </div>
+          <div class="resume-entry">
+            <p class="entry-title" data-i18n="resume.edu2.title">Mavo (pre-vocational secondary education)</p>
+            <p class="entry-meta" data-i18n="resume.edu2.meta">Het Kempenhorst, Oirschot · 2020 to 2024 · diploma obtained</p>
+          </div>
+
+          <h3 data-i18n="resume.work">Work experience</h3>
+          <div class="resume-entry">
+            <p class="entry-title" data-i18n="resume.work1.title">Kitchen Assistant</p>
+            <p class="entry-meta" data-i18n="resume.work1.meta">Restaurant Suus, Best · Aug 2025 to now</p>
+            <ul>
+              <li data-i18n="resume.work1.b1">Promoted from dishwasher to the kitchen team</li>
+              <li data-i18n="resume.work1.b2">Prepare ingredients and dishes in close cooperation with chefs and service staff, also during busy shifts</li>
+            </ul>
+          </div>
+          <div class="resume-entry">
+            <p class="entry-title" data-i18n="resume.work2.title">Dishwasher</p>
+            <p class="entry-meta" data-i18n="resume.work2.meta">Restaurant Suus, Best · Oct 2023 to Jul 2025</p>
+            <ul>
+              <li data-i18n="resume.work2.b1">Kept the kitchen running by working quickly and independently during busy evenings and weekends</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="resume-side">
+          <h3 data-i18n="resume.skills">Technical skills</h3>
+          <ul>
+            <li data-i18n="resume.skillLang">Languages: C#</li>
+            <li data-i18n="resume.skillEngines">Game engines: Unity, Unreal Engine (beginner)</li>
+            <li data-i18n="resume.skillTools">Tools: Visual Studio, Git/GitHub</li>
+          </ul>
+          <h3 data-i18n="resume.languages">Languages</h3>
+          <ul>
+            <li data-i18n="resume.lang1">Dutch: native</li>
+            <li data-i18n="resume.lang2">English: fluent</li>
+            <li data-i18n="resume.lang3">German: basic</li>
+          </ul>
+          <h3 data-i18n="resume.personal">Personal qualities</h3>
+          <p data-i18n="resume.personalText">Hard-working, independent, team player, creative, caring, good listener</p>
+          <h3 data-i18n="resume.interests">Interests</h3>
+          <p data-i18n="resume.interestsText">Gaming, building and collecting LEGO, collecting Funko Pops, reading manga</p>
+        </div>
+      </div>
+    </article>
+  </div>
+</dialog>
+
+</body>
+</html>
