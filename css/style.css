@@ -266,6 +266,9 @@ main:focus { outline: none; }
 .project-body h3 { font-size: 1.6rem; color: var(--coin); margin-bottom: .25rem; }
 .project-genre { color: var(--teal); font-size: 1rem; }
 .project-body .btn { align-self: flex-start; margin-top: auto; }
+/* VOEG TOE: two buttons on one card */
+.card-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: auto; }
+.card-actions .btn { margin-top: 0; }
 
 .tags { list-style: none; display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: 1.25rem; }
 .tags li { font-size: .9rem; padding: .15rem .55rem; background: var(--bg); border: 2px solid var(--line); }

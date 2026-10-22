@@ -75,6 +75,8 @@ window.I18N = {
     'projects.myPart': 'Wat ik heb gebouwd',
     'projects.inProgress': 'In ontwikkeling',
     'projects.code': 'Bekijk mijn code op GitHub',
+    'projects.playDemo': 'Speel de demo',
+    'projects.playDemoItch': 'Speel de demo op itch.io',
 
     'p1.videoLabel': 'Gameplayclip van DownTop',
     'p1.genre': '2D top-down shooter',
@@ -105,12 +107,8 @@ window.I18N = {
     'p3.f1': 'Snij eten in kerstsfeer om punten te scoren',
     'p3.f2': 'Snijd je een cadeautje, dan verlies je een hartje',
     'p3.f3': 'Een gezellige winterse stijl',
-    'p3.c1.problem': 'De game moest een snijbeweging herkennen uit een snelle muisveeg.',
-    'p3.c1.solution': 'Ik volg de muispositie elk frame en controleer welke objecten de lijn tussen de laatste twee posities kruist.',
-    'p3.c2.problem': 'Eten en cadeautjes moesten in leuke, onvoorspelbare bogen omhoog vliegen.',
-    'p3.c2.solution': 'Elk object krijgt een willekeurige kracht omhoog en opzij, en de 2D-physics van Unity doet de rest.',
-    'p3.learned': 'Een simpel idee voelt veel beter met goede feedback, zoals geluiden en effecten als je iets doorsnijdt.',
 
+    'p4.videoLabel': 'Gameplayclip van Chi-Chanting: een aanval wordt in de microfoon uitgesproken',
     'p4.genre': '2D-game geïnspireerd op de klassieke Pokémon-games, team van 4',
     'p4.genreShort': '2D-game geïnspireerd op de klassieke Pokémon-games',
     'p4.short': 'Ga zelf de gevechten aan en activeer aanvallen door ze in de microfoon uit te spreken.',

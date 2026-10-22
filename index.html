@@ -189,9 +189,13 @@
             <button class="btn btn-small" type="button" data-dialog="dlg-p2" aria-haspopup="dialog"><span data-i18n="projects.details">Read the details</span><span class="sr-only">: Dungeon Crawler</span></button>
           </div>
         </li>
-        <!-- VOEG TOE: Chi-Chanting (team project, in development). Placeholder image until screenshots are added -->
+        <!-- VOEG TOE: Chi-Chanting (team project, in development) -->
         <li class="project-card" style="--scene-a:#ffc93c;--scene-b:#3a2f6b">
-          <div class="project-thumb" aria-hidden="true"><span class="thumb-block"></span></div>
+          <!-- WIJZIG: gameplay clip that plays on hover, focus or tap -->
+          <div class="project-thumb has-video">
+            <video class="thumb-video" src="assets/chi-chanting.mp4" poster="assets/chi-chanting.jpg" width="640" height="360" muted loop playsinline preload="none" aria-hidden="true"></video>
+            <button class="video-toggle" type="button"><span class="video-toggle-label">Play clip</span><span class="sr-only">: Chi-Chanting</span></button>
+          </div>
           <div class="project-body">
             <h3>Chi-Chanting</h3>
             <p class="status-badge" data-i18n="projects.inProgress">In development</p><!-- remove when the game is finished -->
@@ -200,7 +204,10 @@
             <ul class="tags" aria-label="Technologies" data-i18n-attr="aria-label:projects.tech">
               <li>Unity</li><li>C#</li>
             </ul>
-            <button class="btn btn-small" type="button" data-dialog="dlg-p4" aria-haspopup="dialog"><span data-i18n="projects.details">Read the details</span><span class="sr-only">: Chi-Chanting</span></button>
+            <div class="card-actions"><!-- VOEG TOE: play the demo -->
+              <button class="btn btn-small" type="button" data-dialog="dlg-p4" aria-haspopup="dialog"><span data-i18n="projects.details">Read the details</span><span class="sr-only">: Chi-Chanting</span></button>
+              <a class="btn btn-small btn-primary" href="https://murani-hiro.itch.io/chi-chanting" target="_blank" rel="noopener"><span data-i18n="projects.playDemo">Play the demo</span><span class="sr-only">: Chi-Chanting, <span data-i18n="common.newTab">(opens in a new tab)</span></span></a>
+            </div>
           </div>
         </li>
         <li class="project-card" style="--scene-a:#ff7b7b;--scene-b:#1f4a3a">
@@ -322,19 +329,7 @@
           <li data-i18n="p3.f2">Slice a present and you lose a heart</li>
           <li data-i18n="p3.f3">A cozy winter style</li>
         </ul>
-        <h4 data-i18n="projects.challenges">Challenges I overcame</h4>
-        <ul class="challenge-list">
-          <li>
-            <p class="challenge-problem" data-i18n="p3.c1.problem">The game had to recognise a slice from a quick mouse swipe.</p>
-            <p data-i18n="p3.c1.solution">I track the mouse position every frame and check which objects the line between the last two positions crosses.</p>
-          </li>
-          <li>
-            <p class="challenge-problem" data-i18n="p3.c2.problem">Food and presents had to fly up in fun, unpredictable arcs.</p>
-            <p data-i18n="p3.c2.solution">Each object gets a random upward and sideways force, and Unity's 2D physics does the rest.</p>
-          </li>
-        </ul>
-        <h4 data-i18n="projects.learned">What I learned</h4>
-        <p data-i18n="p3.learned">A simple idea feels much better with good feedback, like sounds and effects when you slice something.</p>
+        <!-- WIJZIG: challenges removed until the game is finished -->
         <p class="dialog-links">
           <a href="https://github.com/ShadowStar987" target="_blank" rel="noopener"><span data-i18n="projects.code">See my code on GitHub</span><span class="sr-only" data-i18n="common.newTab">(opens in a new tab)</span></a>
         </p>
@@ -348,6 +343,8 @@
           <button class="dialog-close" type="submit"><span data-i18n="projects.close">Close</span></button>
         </form>
         <h3 id="dlg-p4-title">Chi-Chanting</h3>
+        <!-- VOEG TOE: gameplay clip with controls -->
+        <video class="dialog-video" src="assets/chi-chanting.mp4" poster="assets/chi-chanting.jpg" width="640" height="360" controls muted loop playsinline preload="none" aria-label="Gameplay clip of Chi-Chanting: an attack is spoken into the microphone" data-i18n-attr="aria-label:p4.videoLabel"></video>
         <p class="status-badge" data-i18n="projects.inProgress">In development</p>
         <dl class="project-meta">
           <div><dt data-i18n="projects.genreLabel">Genre</dt><dd data-i18n="p4.genreShort">2D game inspired by the classic Pokémon games</dd></div>
@@ -371,6 +368,10 @@
         </ul>
         <h4 data-i18n="projects.learned">What I learned</h4>
         <p data-i18n="p4.learned">How to work together and divide tasks within a development team.</p>
+        <!-- VOEG TOE: play the demo on itch.io -->
+        <p class="dialog-links">
+          <a href="https://murani-hiro.itch.io/chi-chanting" target="_blank" rel="noopener"><span data-i18n="projects.playDemoItch">Play the demo on itch.io</span><span class="sr-only" data-i18n="common.newTab">(opens in a new tab)</span></a>
+        </p>
       </div>
     </dialog>
   </section>
